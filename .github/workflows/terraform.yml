@@ -26,6 +26,6 @@ jobs:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
 
       - name: Terraform apply
-        run: terraform apply -input=false -auto-approve -var-file=variables.tfvars.dev -target=your-resource-type.your-resource-name
+        run: terraform apply --auto-approve
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
